@@ -1,4 +1,4 @@
-<img src="https://embed.creately.com/ysDf0xn3Bri?token=CFXYmNTih7CAbraS&type=svg">
+<a href="https://embed.creately.com/ysDf0xn3Bri?token=CFXYmNTih7CAbraS&type=svg">
 
 # Getting Started with Create React App
 
