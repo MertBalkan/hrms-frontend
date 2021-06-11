@@ -12,7 +12,7 @@ export default function MainMenu() {
             Welcome to HRMS system
         </strong>
         <p>
-            Work In Progress
+            Work In Progressdsads
         </p>
         <p>
             See You!
