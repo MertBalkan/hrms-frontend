@@ -1,36 +1,30 @@
-import React from "react";
+import React, {useState} from "react";
 import { Button, Container, Menu, MenuItem, Icon } from "semantic-ui-react";
+import SignedIn from "./SignedIn";
+import SignedOut from "./SignedOut";
+import { useHistory } from "react-router";
 
 export default function Navi() {
+
+  const [isAuthenticated, setisAuthenticated] = useState(false);
+  const history = useHistory();
+
+  function handleSignOut(){
+    setisAuthenticated(false);
+    history.push("/mainmenu");
+  }
+
+  function handleSignIn(){
+    setisAuthenticated(true);
+  }
+
   return (
     <div>
-      <Menu size="large" inverted color="black" fixed="top">
+      <Menu inverted fixed="top">
         <Container>
-          <div className="home">
-            <Menu.Item name="home">
-              <Icon name="home" color="yellow">
-                <p className="home">Home</p>
-              </Icon>
-            </Menu.Item>
-          </div>
-          <div className="message">
-            <Menu.Item name="messages">
-              <Icon name="mail">
-                <p className="message">Messages</p>
-              </Icon>
-            </Menu.Item>
-          </div>
+          <Menu.Item icon="mail" name="messages" className="message"/>
           <Menu.Menu position="right">
-            <Menu.Item>
-              <Button color="linkedin">Sign Up</Button>
-              <Icon name="plus circle"></Icon>
-            </Menu.Item>
-            <Menu.Item>
-              <Button color="green" icon="sign in">
-                Sign In
-              </Button>
-              <Icon name="sign in"></Icon>
-            </Menu.Item>
+            {isAuthenticated ? <SignedIn signOut = {handleSignOut}/> : <SignedOut signIn = {handleSignIn}/>}
           </Menu.Menu>
         </Container>
       </Menu>

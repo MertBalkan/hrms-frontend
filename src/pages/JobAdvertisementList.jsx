@@ -4,14 +4,17 @@ import JobAdvertisementService from "../services/jobAdvertisementService";
 
 export default function JobAdvertisementList() {
   const [jobAdvertisements, setJobAdvertisements] = useState([]);
-  
-  useEffect(()=>{
+
+  useEffect(() => {
     let jobAdvertisementService = new JobAdvertisementService();
-    jobAdvertisementService.getJobAdvertisements().then(result=>setJobAdvertisements(result.data.data));
-  })
+    jobAdvertisementService
+      .getJobAdvertisements()
+      .then((result) => setJobAdvertisements(result.data.data));
+  });
 
   return (
     <div>
+      <Icon size = "huge" name="calendar alternate" />
       <Table celled>
         <Table.Header>
           <Table.Row>
@@ -26,8 +29,10 @@ export default function JobAdvertisementList() {
         <Table.Body>
           {jobAdvertisements.map((jobAdvertisement) => (
             <Table.Row key={jobAdvertisement.id}>
-            <Table.Cell>{jobAdvertisement.employer.companyName}</Table.Cell>
-            <Table.Cell>{jobAdvertisement.jobPosition.position_name}</Table.Cell>
+              <Table.Cell>{jobAdvertisement.employer.companyName}</Table.Cell>
+              <Table.Cell>
+                {jobAdvertisement.jobPosition.position_name}
+              </Table.Cell>
               <Table.Cell>{jobAdvertisement.description}</Table.Cell>
               <Table.Cell>{jobAdvertisement.openPositions}</Table.Cell>
               <Table.Cell>{jobAdvertisement.deadline}</Table.Cell>

@@ -5,24 +5,14 @@
 .ui.main.container{
   margin-top: 10em;
 }
-
+/*
 .home{
   position: relative;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+  color: orange;
+}*/
 
 .message{
-  
-}
-
-p.home{
   position: relative;
-  right: 10px;
-  font-size: 14px;
-}
-p.message{
-  position: relative;
-  right: 20px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 14px;
 }
