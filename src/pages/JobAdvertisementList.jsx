@@ -23,6 +23,8 @@ export default function JobAdvertisementList() {
             <Table.HeaderCell>Description</Table.HeaderCell>
             <Table.HeaderCell>Open Positions</Table.HeaderCell>
             <Table.HeaderCell>Deadline</Table.HeaderCell>
+            <Table.HeaderCell>Min Salary</Table.HeaderCell>
+            <Table.HeaderCell>Max Salary</Table.HeaderCell>
           </Table.Row>
         </Table.Header>
 
@@ -36,6 +38,8 @@ export default function JobAdvertisementList() {
               <Table.Cell>{jobAdvertisement.description}</Table.Cell>
               <Table.Cell>{jobAdvertisement.openPositions}</Table.Cell>
               <Table.Cell>{jobAdvertisement.deadline}</Table.Cell>
+              <Table.Cell>{jobAdvertisement.minSalary}</Table.Cell>
+              <Table.Cell>{jobAdvertisement.maxSalary}</Table.Cell>
             </Table.Row>
           ))}
         </Table.Body>
