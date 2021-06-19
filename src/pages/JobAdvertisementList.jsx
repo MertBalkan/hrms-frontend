@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { Icon, Menu, Table } from "semantic-ui-react";
+import { NavLink } from "react-router-dom";
+import { Button, Icon, Menu, Table } from "semantic-ui-react";
 import JobAdvertisementService from "../services/jobAdvertisementService";
 
 export default function JobAdvertisementList() {
@@ -46,7 +47,7 @@ export default function JobAdvertisementList() {
 
         <Table.Footer>
           <Table.Row>
-            <Table.HeaderCell colSpan="3">
+            <Table.HeaderCell colSpan="7">
               <Menu floated="right" pagination>
                 <Menu.Item as="a" icon>
                   <Icon name="chevron left" />
@@ -63,6 +64,7 @@ export default function JobAdvertisementList() {
           </Table.Row>
         </Table.Footer>
       </Table>
+      <Button as={NavLink} to="/createNewJobAdvertisement" size="medium" color="green">+ Create New Job Advertisement</Button>
     </div>
   );
 }

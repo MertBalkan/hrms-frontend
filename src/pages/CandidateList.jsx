@@ -38,7 +38,7 @@ export default function CandidateList() {
 
         <Table.Footer>
           <Table.Row>
-            <Table.HeaderCell colSpan="3">
+            <Table.HeaderCell colSpan="4">
               <Menu floated="right" pagination>
                 <Menu.Item as="a" icon>
                   <Icon name="chevron left" />

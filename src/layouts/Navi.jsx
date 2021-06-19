@@ -20,7 +20,7 @@ export default function Navi() {
 
   return (
     <div>
-      <Menu inverted fixed="top">
+      <Menu inverted color="grey" fixed="top">
         <Container>
           <Menu.Item icon="mail" name="messages" className="message"/>
           <Menu.Menu position="right">
